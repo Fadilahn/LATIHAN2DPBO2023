@@ -103,9 +103,9 @@ jika user memilih `-> 3` maka user diminta untuk menginput `Number` yang akan di
 
 - **Java**  
 ![Alt text](img/java.png)
-- **c++**
+- **c++**  
 ![Alt text](cpp/cpp.png)
-- **python**
+- **python**  
 ![Alt text](python/py.png)
-- **php**
+- **php**  
 ![Alt text](php/php.png)
