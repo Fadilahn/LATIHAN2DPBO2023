@@ -102,7 +102,7 @@ jika user memilih `-> 3` maka user diminta untuk menginput `Number` yang akan di
 ![Alt text](img/UML-latihan-2.png)
 
 - **Java**
-![Alt text](java/java.png)
+![Alt text](img/java.png)
 - **c++**
 ![Alt text](cpp/cpp.png)
 - **python**
