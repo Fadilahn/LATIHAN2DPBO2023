@@ -1,12 +1,12 @@
-// import liblary
+// Import library
 #include <iostream>
 #include <vector>
 #include <iomanip>
 
-// deklarasi std agar tidak ditulis ulang
+// Deklarasi std agar tidak ditulis ulang
 using namespace std;
 
-// kelas tabel, untuk membuat dan menampilkan tabel
+// Kelas tabel, untuk membuat dan menampilkan tabel
 template<class T>
 class Table {
     private:
@@ -17,66 +17,79 @@ class Table {
     public:
         Table(){}
 
+        // Method untuk mengatur header tabel
         void setHeaders(vector<string> headers) {
             this->headers = headers;
         }
 
+        // Method untuk membuat border tabel
         string setBorderTable(){
-
+            // Inisialisasi border
             string border = "+";
+
+            // Tentukan lebar kolom pada tabel
             for (int i = 0; i < columnWidths.size(); i++) {
                 for(int j=0; j<columnWidths[i]+1; j++){
                     border += "-";
                 }
                 border += "+";
             }
+
+            // Return bordernya
             return border;
         }
 
+        // Method untuk mengatur lebar kolom pada tabel
         void setWidths(vector<int> widths) {
             this->columnWidths = widths;
             this->border = setBorderTable();
         }
 
+        // Method untuk menampilkan header tabel
         void displayHeader() {
             cout << border << endl;
             cout << "|";
+
             for (int i = 0; i < headers.size(); i++) {
                 cout << setw(columnWidths[i]) << setfill(' ') << left << " " + headers[i] << " |";
             }
+
             cout << endl;
             cout << border << endl;
         }
 
+        // Method untuk menampilkan data pada tabel
         void displayData(vector<vector<string>> data) {
             for (int i = 0; i < data.size(); i++) {
                 cout << "| ";
                 for (int j = 0; j < headers.size(); j++) {
                     if(j == 0){
+                        // Menampilkan nomor urut data
                         cout << setw(columnWidths[j]) << setfill(' ') << left << i+1 << "|";
                     }
                     else{
+                        // Menampilkan data dari tabel
                         cout << setw(columnWidths[j]) << setfill(' ') << left << " " + data[i][j-1] << " |";
                     }
                 }
                 cout << endl;
             }
+
             cout << border << endl;
         }
 
-        // method border untuk membuat border dengan simbol yang diinginkan
+        // Method untuk membuat border dengan simbol yang diinginkan
         string getBorder(int length, char symbol){
-
-            // inisialisasi border
+            // Inisialisasi border
             string border = "";
 
-            // tentukan panjang border dan simbol yang diinginkan
+            // Tentukan panjang border dan simbol yang diinginkan
             for(int i=0; i<length; i++){
-                // looping simbol hingga membentuk baris
+                // Looping simbol hingga membentuk baris
                 border += symbol;
             }
 
-            // return bordernya
+            // Return bordernya
             return border;
         }
 
