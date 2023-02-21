@@ -109,3 +109,24 @@ jika user memilih `-> 3` maka user diminta untuk menginput `Number` yang akan di
 ![Alt text](python/py.png)
 - **php**  
 ![Alt text](php/php.png)
+
+### Test Case
+```
+1
+Fadhillah
+Laki-laki
+2107135
+FPMIPA
+Ilmu_Komputer
+UPI
+a@upi.edu
+
+2
+V
+P
+2
+FPMIPA
+Biologi
+UPI
+b@upi.edu
+```
